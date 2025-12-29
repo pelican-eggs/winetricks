@@ -9893,6 +9893,56 @@ load_dotnetdesktop9()
 
 #----------------------------------------------------------------
 
+w_metadata dotnet100 dlls \
+    title="MS .NET Runtime 10.0 LTS" \
+    publisher="Microsoft" \
+    year="2025" \
+    media="download" \
+    file1="dotnet-runtime-10.0.1-win-x86.exe" \
+    installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
+
+load_dotnet100()
+{
+    # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/10.0
+    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.1/dotnet-runtime-10.0.1-win-x86.exe fb28a132e418287e62fce2d246d6106fdf0c2fa5185450e6bcd9c691d515cbe2
+
+    w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
+    w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
+
+    if [ "${W_ARCH}" = "win64" ]; then
+        # Also install the 64-bit version
+        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.1/dotnet-runtime-10.0.1-win-x64.exe 2f4eb992fa2cddd969b765030cbedb332549c32409a62451feb5644273f3819e
+        w_try "${WINE}" "dotnet-runtime-10.0.1-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+    fi
+}
+
+#----------------------------------------------------------------
+
+w_metadata dotnetdesktop100 dlls \
+    title="MS .NET Desktop Runtime 10.0 LTS" \
+    publisher="Microsoft" \
+    year="2025" \
+    media="download" \
+    file1="windowsdesktop-runtime-10.0.1-win-x86.exe" \
+    installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
+
+load_dotnetdesktop10()
+{
+    # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/10.0
+    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.1/windowsdesktop-runtime-10.0.1-win-x86.exe e9d09c9565adac21ee9f51b39e590b3c5861c15e1994cdae09da58267a41e298
+
+    w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
+    w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
+
+    if [ "${W_ARCH}" = "win64" ]; then
+        # Also install the 64-bit version
+        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.1/windowsdesktop-runtime-10.0.1-win-x64.exe 38fd64ecee9bd9e364ea6ff698853bf303b195d7339dca961de3b5b13f499e8a
+        w_try "${WINE}" "windowsdesktop-runtime-10.0.1-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+    fi
+}
+
+#----------------------------------------------------------------
+
 w_metadata dotnet_verifier dlls \
     title="MS .NET Verifier" \
     publisher="Microsoft" \
