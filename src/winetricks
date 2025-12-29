@@ -9926,7 +9926,7 @@ w_metadata dotnetdesktop100 dlls \
     file1="windowsdesktop-runtime-10.0.1-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
-load_dotnetdesktop10()
+load_dotnetdesktop100()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/10.0
     w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.1/windowsdesktop-runtime-10.0.1-win-x86.exe e9d09c9565adac21ee9f51b39e590b3c5861c15e1994cdae09da58267a41e298
