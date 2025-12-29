@@ -9798,21 +9798,21 @@ w_metadata dotnet8 dlls \
     publisher="Microsoft" \
     year="2024" \
     media="download" \
-    file1="dotnet-runtime-8.0.21-win-x86.exe" \
+    file1="dotnet-runtime-8.0.22-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnet8()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/8.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.21/dotnet-runtime-8.0.21-win-x86.exe 8705a09b5c9a6403eb6921a6ec1c1de3dac88e15eddb2180282e3fc58abff419
+    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.22/dotnet-runtime-8.0.22-win-x86.exe 8e936927e69da9422b66e927c8e1b66eb363279dc6ecfdcc6fdfb62305fdba9d
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.21/dotnet-runtime-8.0.21-win-x64.exe d789bc7275c991e3efa604ccbc4418470f52231e3bcd9fb8ef98a61bb5d5c625
-        w_try "${WINE}" "dotnet-runtime-8.0.21-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.22/dotnet-runtime-8.0.22-win-x64.exe df98de9c6476e4aefc772fb6d8616bfa9e2998e3056b5c01992b97745443e1a0
+        w_try "${WINE}" "dotnet-runtime-8.0.22-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -9823,21 +9823,21 @@ w_metadata dotnetdesktop8 dlls \
     publisher="Microsoft" \
     year="2024" \
     media="download" \
-    file1="windowsdesktop-runtime-8.0.21-win-x86.exe" \
+    file1="windowsdesktop-runtime-8.0.22-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnetdesktop8()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/8.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x86.exe b24eedfab904688984639f8e55ee1826153a8487699b52ee04a58e1ba508b6f6
+    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.22/windowsdesktop-runtime-8.0.22-win-x86.exe 2d143f77fa1572f8c9cfcdeeb4784ece6d60fa8f4908ba2da8109869d84d56be
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x64.exe f551625bad9adabba3269457240b8dc9448715bcdff0c7ac5e7f8c05cbc7de04
-        w_try "${WINE}" "windowsdesktop-runtime-8.0.21-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.22/windowsdesktop-runtime-8.0.22-win-x64.exe ec0d3238acbf55247eb57c5dbbe294504d0e8e48631094e0ee4c90f0764d83ef
+        w_try "${WINE}" "windowsdesktop-runtime-8.0.22-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
