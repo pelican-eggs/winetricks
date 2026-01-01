@@ -87,7 +87,7 @@ dotnet6                  MS .NET Runtime 6.0 LTS (Microsoft, 2023) [downloadable
 dotnet7                  MS .NET Runtime 7.0 LTS (Microsoft, 2023) [downloadable]
 dotnet8                  MS .NET Runtime 8.0 LTS (Microsoft, 2024) [downloadable]
 dotnet9                  MS .NET Runtime 9.0 LTS (Microsoft, 2024) [downloadable]
-dotnet10                 MS .NET Runtime 10.0 LTS (Microsoft, 2025) [downloadable]
+dotnet100                MS .NET Runtime 10.0 LTS (Microsoft, 2025) [downloadable]
 dotnet_verifier          MS .NET Verifier (Microsoft, 2016) [downloadable]
 dotnetcore2              MS .NET Core Runtime 2.1 LTS (Microsoft, 2020) [downloadable]
 dotnetcore3              MS .NET Core Runtime 3.1 LTS (Microsoft, 2020) [downloadable]
