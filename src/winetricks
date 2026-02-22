@@ -9800,21 +9800,21 @@ w_metadata dotnet8 dlls \
     publisher="Microsoft" \
     year="2024" \
     media="download" \
-    file1="dotnet-runtime-8.0.21-win-x86.exe" \
+    file1="dotnet-runtime-8.0.24-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnet8()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/8.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.21/dotnet-runtime-8.0.21-win-x86.exe 8705a09b5c9a6403eb6921a6ec1c1de3dac88e15eddb2180282e3fc58abff419
+    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.24/dotnet-runtime-8.0.24-win-x86.exe 3993b2a6f13a4de518d118a5ecfe41d03a0abea61c8777e0e78ad83c3c08aa54
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.21/dotnet-runtime-8.0.21-win-x64.exe d789bc7275c991e3efa604ccbc4418470f52231e3bcd9fb8ef98a61bb5d5c625
-        w_try "${WINE}" "dotnet-runtime-8.0.21-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.24/dotnet-runtime-8.0.24-win-x64.exe 759d53bd600cac23982d8cb82e5ade3ba787f759680a536fdc11e4df5a310a9e
+        w_try "${WINE}" "dotnet-runtime-8.0.24-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -9825,21 +9825,21 @@ w_metadata dotnetdesktop8 dlls \
     publisher="Microsoft" \
     year="2024" \
     media="download" \
-    file1="windowsdesktop-runtime-8.0.21-win-x86.exe" \
+    file1="windowsdesktop-runtime-8.0.24-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnetdesktop8()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/8.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x86.exe b24eedfab904688984639f8e55ee1826153a8487699b52ee04a58e1ba508b6f6
+    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.24/windowsdesktop-runtime-8.0.24-win-x86.exe 32c828fc37d352b7bf2dd1346566b2893dbe00b4fe6b3fee5e59130dfbe934aa
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x64.exe f551625bad9adabba3269457240b8dc9448715bcdff0c7ac5e7f8c05cbc7de04
-        w_try "${WINE}" "windowsdesktop-runtime-8.0.21-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.24/windowsdesktop-runtime-8.0.24-win-x64.exe 4a53b5af35f70641fb1cf392d0ecf5d0c6c630383500eda4f8dbb683f37dccbb
+        w_try "${WINE}" "windowsdesktop-runtime-8.0.24-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -9850,21 +9850,21 @@ w_metadata dotnet9 dlls \
     publisher="Microsoft" \
     year="2024" \
     media="download" \
-    file1="dotnet-runtime-9.0.10-win-x86.exe" \
+    file1="dotnet-runtime-9.0.13-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnet9()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/9.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.10/dotnet-runtime-9.0.10-win-x86.exe 75a4a79ac8c709d18ad184db7f148df4dc303c14d762488103087ded9ae6cfae
+    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.13/dotnet-runtime-9.0.13-win-x86.exe 1b6da4fc88a7e2eb09bea575bc66764d30c1f1ed5a1e661fc0bff85906cfe15d
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.10/dotnet-runtime-9.0.10-win-x64.exe c551ea48d92bef55107a3a96354cc355f3e4dc4394025466f637bc95532ece88
-        w_try "${WINE}" "dotnet-runtime-9.0.10-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.13/dotnet-runtime-9.0.13-win-x64.exe 01caab12648e3bfd02384198934b94ced97d7ee9393573adcf309532daacd993
+        w_try "${WINE}" "dotnet-runtime-9.0.13-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -9875,21 +9875,21 @@ w_metadata dotnetdesktop9 dlls \
     publisher="Microsoft" \
     year="2024" \
     media="download" \
-    file1="windowsdesktop-runtime-9.0.10-win-x86.exe" \
+    file1="windowsdesktop-runtime-9.0.13-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnetdesktop9()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/9.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.10/windowsdesktop-runtime-9.0.10-win-x86.exe be7ce3493e6a699312e345ad932acd0413b158b048eccdb94df22687a3b213ae
+    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.13/windowsdesktop-runtime-9.0.13-win-x86.exe c391c046de51b7f57c4b2a3b39430f1e0ca67dd4dad01825011260ea83d7061c
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.10/windowsdesktop-runtime-9.0.10-win-x64.exe 35bbb4850edbb0bf713e588b1d7026fc7cc1208331b2b5d9b3a33f27940d5cef
-        w_try "${WINE}" "windowsdesktop-runtime-9.0.10-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.13/windowsdesktop-runtime-9.0.13-win-x64.exe 404aa21ae86195d4058549dff715e15f10c48afe1c6d77f51bc5a420164e07d5
+        w_try "${WINE}" "windowsdesktop-runtime-9.0.13-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -9900,21 +9900,21 @@ w_metadata dotnet10 dlls \
     publisher="Microsoft" \
     year="2025" \
     media="download" \
-    file1="dotnet-runtime-10.0.0-win-x86.exe" \
+    file1="dotnet-runtime-10.0.3-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnet10()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/10.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.0/dotnet-runtime-10.0.0-win-x86.exe 90bc5667c2a35c030a2e964e7083fe8fbdbc461377d27b4f0d9bf7b400d7b982
+    w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.3/dotnet-runtime-10.0.3-win-x86.exe 1fb85207bc65337a546ae147e563ecc3d1f989290b0fa1889722259c44daf52a
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.0/dotnet-runtime-10.0.0-win-x64.exe ca2dd25d477174767a55756d9ef92bbda0d3c7ef12cef284a542689b2ba52767
-        w_try "${WINE}" "dotnet-runtime-10.0.0-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.3/dotnet-runtime-10.0.3-win-x64.exe 30b58ad4a7c4d520795c1661347080e90bde35d5b1229769ab957acbcb593af0
+        w_try "${WINE}" "dotnet-runtime-10.0.3-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -9925,21 +9925,21 @@ w_metadata dotnetdesktop10 dlls \
     publisher="Microsoft" \
     year="2025" \
     media="download" \
-    file1="windowsdesktop-runtime-10.0.0-win-x86.exe" \
+    file1="windowsdesktop-runtime-10.0.3-win-x86.exe" \
     installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
 
 load_dotnetdesktop10()
 {
     # Official version, see https://dotnet.microsoft.com/en-us/download/dotnet/10.0
-    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-x86.exe ac38c81fef78c565d6bfbddf49ac5bcca354616176c0108c5f0e23333c3d093a
+    w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.3/windowsdesktop-runtime-10.0.3-win-x86.exe 757f9ce470540888135fc5466df5561302411b8e0e5e52c855f299bc708a856e
 
     w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
     w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
 
     if [ "${W_ARCH}" = "win64" ]; then
         # Also install the 64-bit version
-        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-x64.exe fc0494eaf529b15f74b10d920784cc618ff0845bebfdfd5d85d585e921157a5c
-        w_try "${WINE}" "windowsdesktop-runtime-10.0.0-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+        w_download https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.3/windowsdesktop-runtime-10.0.3-win-x64.exe 48bac209f52eb48652b349ba0347ca51dcf6f3d1f53d9126880ee650692b8f11
+        w_try "${WINE}" "windowsdesktop-runtime-10.0.3-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
     fi
 }
 
@@ -15389,20 +15389,20 @@ load_3m_library()
 #----------------------------------------------------------------
 
 w_metadata 7zip apps \
-    title="7-Zip 25.01" \
+    title="7-Zip 26.00" \
     publisher="Igor Pavlov" \
-    year="2024" \
+    year="2026" \
     media="download" \
-    file1="7z2409.exe" \
+    file1="7z2600.exe" \
     installed_exe1="${W_PROGRAMS_WIN}/7-Zip/7zFM.exe"
 
 load_7zip()
 {
     if [ "${W_ARCH}" = "win32" ]; then
-        w_download https://www.7-zip.org/a/7z2501.exe b96831eec5928384f0543d6b57c1f802952a0f2668e662882c0a785a2b52fb3b
+        w_download https://www.7-zip.org/a/7z2600.exe d605eb609aa67796dca7cfe26d7e28792090bb8048302d6e05ede16e8e33145c
         _W_installer_exe=7z2409.exe
     elif [ "${W_ARCH}" = "win64" ]; then
-        w_download https://www.7-zip.org/a/7z2501-x64.exe 78afa2a1c773caf3cf7edf62f857d2a8a5da55fb0fff5da416074c0d28b2b55f
+        w_download https://www.7-zip.org/a/7z2600-x64.exe 6fe18d5b3080e39678cabfa6cef12cfb25086377389b803a36a3c43236a8a82c
         _W_installer_exe=7z2409-x64.exe
     fi
     w_try_cd "${W_CACHE}/${W_PACKAGE}"
